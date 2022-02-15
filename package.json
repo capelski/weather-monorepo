@@ -1,0 +1,39 @@
+{
+  "author": "Carles Capellas <capellas.carles@gmail.com>",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  },
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
+  "license": "ISC",
+  "name": "weather-monorepo",
+  "scripts": {
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd weather-client && npm run build",
+    "build:client:check": "cd weather-client && npm run build:check",
+    "build:server": "cd weather-server && npm run build",
+    "build:server:check": "cd weather-server && npm run build:check",
+    "clean": "npm run clean:client && npm run clean:server",
+    "clean:client": "cd weather-client && npm run clean",
+    "clean:client:modules": "cd weather-client && npm run clean:modules",
+    "clean:modules": "rm -rf node_modules && npm run clean:client:modules && npm run clean:server:modules",
+    "clean:server": "cd weather-server && npm run clean",
+    "clean:server:modules": "cd weather-server && npm run clean:modules",
+    "deploy-assets": "npm run build:client && rm -rf weather-server/public && cp -a weather-client/distribution weather-server/public",
+    "format:check": "prettier --list-different './weather-{client,server}/**/*.{js,ts,tsx}' './**/*.json'",
+    "format:fix": "prettier --write './weather-{client,server}/**/*.{js,ts,tsx}' './**/*.json'",
+    "install:client": "cd weather-client && npm install",
+    "install:server": "cd weather-server && npm install",
+    "postinstall": "npm run install:client && npm run install:server",
+    "prepare": "husky install",
+    "start:dev": "concurrently --kill-others \"npm run start:dev:server\" \"npm run start:dev:client\"",
+    "start:dev:client": "cd weather-client && npm run start:dev",
+    "start:dev:server": "cd weather-server && npm run start:dev",
+    "start:server": "cd weather-server && npm run start"
+  }
+}

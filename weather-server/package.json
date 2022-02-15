@@ -1,0 +1,22 @@
+{
+  "author": "Carles Capellas <capellas.carles@gmail.com>",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0"
+  },
+  "license": "ISC",
+  "main": "distribution/index.js",
+  "name": "weather-server",
+  "scripts": {
+    "build": "npm run clean && tsc -p ./tsconfig.server.json",
+    "build:check": "tsc -p ./tsconfig.server.json --noEmit",
+    "clean": "rm -rf distribution",
+    "clean:modules": "rm -rf node_modules",
+    "start": "node distribution/index.js",
+    "start:dev": "nodemon source/index.ts"
+  }
+}
