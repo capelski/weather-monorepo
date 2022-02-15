@@ -1,0 +1,4 @@
+{
+  "watch": ["source/", "../weather-common/source"],
+  "ext": "ts"
+}

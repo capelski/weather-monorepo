@@ -18,6 +18,7 @@
     "build:client:check": "cd weather-client && npm run build:check",
     "build:common": "cd weather-common && npm run build",
     "build:common:check": "cd weather-common && npm run build:check",
+    "build:common:watch": "cd weather-common && npm run build:watch",
     "build:server": "cd weather-server && npm run build",
     "build:server:check": "cd weather-server && npm run build:check",
     "clean": "npm run clean:client && npm run clean:common && npm run clean:server",
@@ -34,7 +35,7 @@
     "install:server": "cd weather-server && npm install",
     "postinstall": "npm run install:client && npm run install:server",
     "prepare": "husky install",
-    "start:dev": "concurrently --kill-others \"npm run start:dev:server\" \"npm run start:dev:client\"",
+    "start:dev": "concurrently --kill-others \"npm run build:common:watch\" \"npm run start:dev:server\" \"npm run start:dev:client\"",
     "start:dev:client": "cd weather-client && npm run start:dev",
     "start:dev:server": "cd weather-server && npm run start:dev",
     "start:server": "cd weather-server && npm run start"
