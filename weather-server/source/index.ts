@@ -1,6 +1,6 @@
 import express from 'express';
 import { join } from 'path';
-import { validateCityName, Weather } from '../../weather-common';
+import { validateCityName, Weather } from 'weather-common';
 import { randomFloat, randomWeatherIcon } from './utils';
 
 const getRandomWeather = (): Weather => ({
