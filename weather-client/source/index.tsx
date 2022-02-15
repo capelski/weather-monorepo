@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Weather } from './types';
-import { validateCityName } from './utils';
+import { validateCityName, Weather } from '../../weather-common';
 
 const App: React.FC = () => {
   const [cityName, setCityName] = useState('');
