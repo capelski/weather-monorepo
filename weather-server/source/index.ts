@@ -13,7 +13,11 @@ const getRandomWeather = (): Weather => ({
 
 const app = express();
 
-app.use('/', express.static(join(__dirname, '..', 'public')));
+const publicPath = process.env.NODEMON
+  ? join(__dirname, '..', 'public')
+  : join(__dirname, '..', '..', '..', 'public');
+
+app.use('/', express.static(publicPath));
 
 app.get('/api/weather', express.json(), (req, res) => {
   const cityName = <string | undefined>req.query.cityName;

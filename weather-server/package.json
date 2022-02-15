@@ -9,14 +9,14 @@
     "ts-node": "^10.4.0"
   },
   "license": "ISC",
-  "main": "distribution/index.js",
+  "main": "distribution/weather-server/source/index.js",
   "name": "weather-server",
   "scripts": {
     "build": "npm run clean && tsc -p ./tsconfig.server.json",
     "build:check": "tsc -p ./tsconfig.server.json --noEmit",
     "clean": "rm -rf distribution",
     "clean:modules": "rm -rf node_modules",
-    "start": "node distribution/index.js",
-    "start:dev": "nodemon source/index.ts"
+    "start": "node distribution/weather-server/source/index.js",
+    "start:dev": "NODEMON=true nodemon source/index.ts"
   }
 }
