@@ -11,7 +11,7 @@
     "node": ">=16.0.0"
   },
   "license": "ISC",
-  "name": "weather-monorepo",
+  "name": "@weather/monorepo",
   "scripts": {
     "build": "npm run build:common && npm run build:client && npm run build:server",
     "build:client": "cd projects/@weather/weather-client && npm run build",

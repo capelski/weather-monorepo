@@ -16,7 +16,7 @@
     "webpack-merge": "^5.8.0"
   },
   "license": "ISC",
-  "name": "weather-client",
+  "name": "@weather/client",
   "scripts": {
     "build": "npm run clean && webpack --config webpack/production.config.js",
     "build:check": "tsc -p ./tsconfig.client.json --noEmit",
