@@ -39,5 +39,8 @@
     "start:dev:client": "cd projects/weather-client && npm run start:dev",
     "start:dev:server": "cd projects/weather-server && npm run start:dev",
     "start:server": "cd projects/weather-server && npm run start"
-  }
+  },
+  "workspaces": [
+    "./projects/*"
+  ]
 }
