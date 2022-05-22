@@ -1,4 +1,4 @@
-import { WeatherIcons } from '../../common';
+import { WeatherIcons } from '@weather/common';
 
 export const randomFloat = (min: number, max: number, decimals = 2) => {
   const randomNumber = Math.random() * (max - min + 1) + min;
