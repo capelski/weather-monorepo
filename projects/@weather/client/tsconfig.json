@@ -1,3 +1,8 @@
 {
+  "compilerOptions": {
+    "paths": {
+      "@weather/common": ["../common/source"]
+    }
+  },
   "extends": "./tsconfig.client.json"
 }
