@@ -1,0 +1,4 @@
+{
+  "watch": ["source/", "../common/source"],
+  "ext": "ts"
+}
