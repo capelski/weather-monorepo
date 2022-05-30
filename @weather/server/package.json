@@ -1,6 +1,7 @@
 {
   "author": "Carles Capellas <capellas.carles@gmail.com>",
   "dependencies": {
+    "@weather/common": "file:../common",
     "express": "^4.17.2"
   },
   "devDependencies": {
