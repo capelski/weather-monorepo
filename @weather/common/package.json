@@ -2,7 +2,7 @@
   "author": "Carles Capellas <capellas.carles@gmail.com>",
   "license": "ISC",
   "main": "distribution/index.js",
-  "name": "weather-common",
+  "name": "@weather/common",
   "scripts": {
     "build": "npm run clean && tsc -p ./tsconfig.common.json",
     "build:check": "tsc -p ./tsconfig.common.json --noEmit",
