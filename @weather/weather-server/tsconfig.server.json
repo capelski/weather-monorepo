@@ -2,6 +2,6 @@
   "compilerOptions": {
     "outDir": "./distribution"
   },
-  "extends": "../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   "include": ["source/**/*"]
 }
