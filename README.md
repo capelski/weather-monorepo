@@ -23,9 +23,11 @@ main
       |
       ├─ 3-local-dependency
       |
+      ├─ 3-local-dependency-namespace
+      |
       ├─ 4-npm-workspaces
       |
-      └─ 5-prefixed-npm-workspaces
+      └─ 4-npm-workspaces-namespace
 ```
 
 - **main**. Single monorepo combining interdependent individual repositories (i.e. [weather-client](https://github.com/capelski/weather-client) and [weather-server](https://github.com/capelski/weather-server)). At this stage only repository settings (e.g. prettier, husky, VSCode settings and and all-projects .gitignore folders) and runtime settings (e.g. all-projects tsconfig.json properties and all-projects dependencies) are shared.
@@ -38,6 +40,8 @@ main
 
 - **3-local-dependency**. Fixing the runtime errors by turning the `weather-common` folder into an npm project and replacing the relative path imports with npm local dependencies.
 
+- **3-local-dependency-namespace**. Same as `3-local-dependency` but renaming the npm packages and changing the folder structure to use the `@weather` namespace beforehand.
+
 - **4-npm-workspaces**. Fixing the runtime errors by turning the `weather-common` folder into an npm project and replacing the relative path imports with npm workspaces.
 
-- **5-prefixed-npm-workspaces**. Fixing the runtime errors by turning the `weather-common` folder into an npm project and replacing the relative path imports with prefixed npm workspaces.
+- **4-npm-workspaces-namespace**. Same as `4-npm-workspaces` but renaming the npm packages and changing the folder structure to use the `@weather` namespace beforehand.
