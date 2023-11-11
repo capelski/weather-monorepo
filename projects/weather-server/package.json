@@ -2,7 +2,7 @@
   "author": "Carles Capellas <capellas.carles@gmail.com>",
   "dependencies": {
     "express": "^4.17.2",
-    "weather-common": "file:projects/weather-common"
+    "weather-common": "file:../weather-common"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
