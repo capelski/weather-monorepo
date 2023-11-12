@@ -22,7 +22,6 @@
     "build": "npm run clean && webpack --config webpack/production.config.js",
     "build:check": "tsc -p ./tsconfig.client.json --noEmit",
     "clean": "rm -rf distribution",
-    "clean:modules": "rm -rf node_modules",
     "start:dev": "webpack serve --config webpack/development.config.js"
   }
 }

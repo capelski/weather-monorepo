@@ -16,7 +16,6 @@
     "build": "npm run clean && tsc -p ./tsconfig.server.json",
     "build:check": "tsc -p ./tsconfig.server.json --noEmit",
     "clean": "rm -rf distribution",
-    "clean:modules": "rm -rf node_modules",
     "start": "node distribution/index.js",
     "start:dev": "nodemon source/index.ts"
   }
